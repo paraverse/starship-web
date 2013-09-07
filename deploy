@@ -2,9 +2,9 @@
 
 go install github.com/metaverse/starship-web
 git checkout bin
+git merge master bin
 cp ~/dev/go/bin/starship-web .
 git add starship-web
 git commit -m "autodeploy"
 git push origin bin
 git checkout master
-
