@@ -6,4 +6,5 @@ import (
 
 var routes = []*dingo.AHandler{
 	dingo.NewHandler("GET", "/", IndexController{}),
+	dingo.NewHandler("GET", "/github-globe/", GithubGlobeController{}),
 }

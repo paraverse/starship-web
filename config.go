@@ -7,6 +7,6 @@ import (
 var config = dingo.Config{
 	Port:        "1337",
 	TemplateDir: "/",
-	StaticDir:   "/",
+	StaticDir:   "/static/",
 	Routes:      routes,
 }
