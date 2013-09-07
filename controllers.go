@@ -12,10 +12,10 @@ func (c IndexController) Respond(w http.ResponseWriter, r *http.Request, data ma
 	fmt.Fprintf(w, "hello, world")
 }
 
-type GithubGlobeController struct{}
+type JSONController struct{}
 
-func (c GithubGlobeController) Respond(w http.ResponseWriter, r *http.Request, data map[string]string) {
-	json, err := loadJSON("github-globe")
+func (c JSONController) Respond(w http.ResponseWriter, r *http.Request, data map[string]string) {
+	json, err := loadJSON(data["filename"])
 
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
