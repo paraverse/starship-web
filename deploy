@@ -1,0 +1,10 @@
+#!/bin/sh
+
+go install github.com/metaverse/starship-web
+git checkout bin
+cp ~/dev/go/bin/starship-web .
+git add starship-web
+git commit -m "autodeploy"
+git push origin bin
+git checkout master
+
